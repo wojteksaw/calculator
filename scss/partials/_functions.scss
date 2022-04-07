@@ -1,0 +1,28 @@
+@use "sass:math";
+
+@function calculate($num1, $num2, $action) {
+
+    @if $action == dz {
+        $result: math.div($num1, $num2);
+        @return $result+px;
+    } 
+    
+    @else if $action == m {
+        $result: $num1 * $num2;
+        @return $result+px;
+    }
+    @else if $action == d {
+        $result: $num1 + $num2;
+        @return $result+px;
+    }  
+
+    @else if $action == o {
+        $result: $num1 - $num2;
+        @return $result+px;
+    }
+}
+    
+
+div {
+    width: calculate(100, 2, m)
+}

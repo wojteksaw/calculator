@@ -1,28 +1,4 @@
-@use "sass:math";
-
-@function calculate($num1, $num2, $action) {
-
-    @if $action == dz {
-        $result: math.div($num1, $num2);
-        @return $result;
-    } 
-    
-    @else if $action == m {
-        $result: $num1 * $num2;
-        @return $result;
-    }
-    @else if $action == d {
-        $result: $num1 + $num2;
-        @return $result;
-    }  
-
-    @else if $action == o {
-        $result: $num1 - $num2;
-        @return $result;
-    }
-}
-    
-
-div {
-    width: calculate(100px, 2, o)
-}
+@use 'partials/header';
+@use 'partials/main';
+@use 'partials/footer';
+@use 'partials/functions';
